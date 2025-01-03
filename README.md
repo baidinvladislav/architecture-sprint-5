@@ -1,54 +1,84 @@
-Setting Up and Running Rasa and the Project
+# Setting Up and Running Rasa and the Project
 
-Requirements:
-* Python: Supported versions are Python 3.7 - 3.10 (Python 3.11 is not supported).
-* Virtualenv: Using a virtual environment is recommended for isolating project dependencies.
+## Requirements
+- **Python**: Supported versions are Python 3.7 - 3.10 (Python 3.11 is not supported).
+- **Virtualenv**: Using a virtual environment is recommended for isolating project dependencies.
 
+---
 
-1. Set Up Python and Create a Virtual Environment
+## 1. Set Up Python and Create a Virtual Environment
+1. Ensure `pip` is installed:
+   ```bash
+   python -m ensurepip --upgrade
+   ```
+2. Install `virtualenv` if it's not already installed:
+   ```bash
+   pip install virtualenv
+   ```
+3. Create a virtual environment:
+   ```bash
+   python -m venv rasa_env
+   ```
+4. Activate the virtual environment:
+   ```bash
+   source rasa_env/bin/activate
+   ```
 
-Virtualenv (рекомендуется): использование виртуальной среды для изоляции окружения и зависимостей проекта.
-1. Убедитесь, что pip установлен. Выполните команду:
-python -m ensurepip --upgrade
-Установите virtualenv, если он ещё не установлен:
-pip install virtualenv
-Создайте виртуальное окружение:
-python -m venv rasa_env
-Активируйте виртуальное окружение:
-source rasa_env/bin/activate
+---
 
-Установите Rasa через pip:
-pip install rasa
-Установите библиотеку Transformers для работы с предобученными LLM моделями, такими как BERT, GPT:
-pip install transformers
-Проверьте, что Rasa и окружение установлено, выполните команду:
-rasa --version
+## 2. Install Rasa
+1. Install Rasa using `pip`:
+   ```bash
+   pip install rasa
+   ```
+2. Install the `Transformers` library for working with pre-trained models like BERT and GPT:
+   ```bash
+   pip install transformers
+   ```
+3. Verify that Rasa is installed:
+   ```bash
+   rasa --version
+   ```
 
-Выполните тренировку модели на новой конфигурации:
-rasa train 
+---
 
-Запустите сервер действий Rasa
-```
-rasa run actions
-```
+## 3. Train the Model
+1. Train the model:
+   ```bash
+   rasa train
+   ```
 
-Запустите ассистента:
-```
-rasa run --cors "*"
-```
+---
 
-Загрузите и установите все необходимые зависимости 
-```
-npm install
-```
+## 4. Run Rasa
+1. Start the Rasa action server:
+   ```bash
+   rasa run actions
+   ```
+2. Start Rasa with CORS support:
+   ```bash
+   rasa run --cors "*"
+   ```
 
-Соберите проект
-```
-npm run build
-```
+---
 
-Запустите проект
-```
-npm run start
-```
+## 5. Set Up and Run the Frontend
+1. Install all necessary dependencies:
+   ```bash
+   npm install
+   ```
+2. Build the project:
+   ```bash
+   npm run build
+   ```
+3. Start the project:
+   ```bash
+   npm run start
+   ```
 
+---
+
+## After this you can try to work with AI assitant in your web-browser
+![img.png](img.png)
+
+---
