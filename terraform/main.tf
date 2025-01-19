@@ -58,7 +58,7 @@ resource "yandex_compute_instance" "vm" {
         - echo "Attempting to clone repository" > /home/ubuntu/clone_debug.log
         - apt-get update && apt-get install -y git >> /home/ubuntu/debug.log 2>&1
         - git clone --branch sprint-5 https://github.com/baidinvladislav/architecture-sprint-5.git /home/ubuntu/project >> /home/ubuntu/debug.log 2>&1
-        - cd /home/ubuntu
+        - cd /home/ubuntu/project
         - pip3 install virtualenv
         - virtualenv /opt/rasa_env
         - /opt/rasa_env/bin/pip install rasa transformers
