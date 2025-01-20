@@ -9,7 +9,7 @@ terraform {
 
 provider "yandex" {
   folder_id = "b1gpijacueemuiv6g27k"
-  token     = "t1.9euelZqWx5OemcmRx8vOzsaZiZDPzu3rnpWalJ6YkZvGnJScnp6ciZKVmZjl8_dKJ0xD-e8gNkoL_t3z9wpWSUP57yA2Sgv-zef1656VmszNm8qLzImMzcqcnIyezMqS7_zN5_XrnpWax5POx5mNypqYjoyLjsvNm4rv_cXrnpWazM2byovMiYzNypycjJ7MypI.aYKOV5CRlACHWZymIqamp3H8UW9ClVqfW0pfj9TLWEAC0w9T6J2h8yav5DR4kuNYCMBPy4_Bf4EMdnJWECAeBA"
+  token     = "t1.9euelZrPk4-YzceQncnGxoyPx5LHye3rnpWalJ6YkZvGnJScnp6ciZKVmZjl8_cuFkZD-e9PMmlA_t3z925EQ0P5708yaUD-zef1656VmsbOi5uTkM3Lm4-TypfOypqS7_zN5_XrnpWax5POx5mNypqYjoyLjsvNm4rv_cXrnpWaxs6Lm5OQzcubj5PKl87KmpI.4pUyES0kpKca9lA7l_i3kqmNtv1F1vf60uzvzrXx3Pvp_beepGQ-yrWB1kQGdDIh_zFDuFlD2-j8ovP9OAQIBg"
 }
 
 data "yandex_compute_image" "ubuntu" {
@@ -62,9 +62,9 @@ resource "yandex_compute_instance" "vm" {
         - pip3 install virtualenv
         - virtualenv /opt/rasa_env
         - /opt/rasa_env/bin/pip install rasa transformers
-        - /opt/rasa_env/bin/rasa train
-        - /opt/rasa_env/bin/rasa run actions
-        - /opt/rasa_env/bin/rasa run --cors "*"
+        - /opt/rasa_env/bin/rasa train >> /home/ubuntu/rasa_train.log 2>&1
+        - nohup /opt/rasa_env/bin/rasa run actions --cors "*" --port 5055 > /home/ubuntu/rasa_actions.log 2>&1 &
+        - nohup /opt/rasa_env/bin/rasa run --cors "*" --model /home/ubuntu/project/models --debug > /home/ubuntu/rasa_server.log 2>&1
         - npm install
         - npm run build
         - npm run start
