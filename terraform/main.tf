@@ -64,7 +64,7 @@ resource "yandex_compute_instance" "vm" {
         - /opt/rasa_env/bin/pip install rasa transformers
         - /opt/rasa_env/bin/rasa train >> /home/ubuntu/rasa_train.log 2>&1
         - nohup /opt/rasa_env/bin/rasa run actions --cors "*" --port 5055 > /home/ubuntu/rasa_actions.log 2>&1 &
-        - nohup /opt/rasa_env/bin/rasa run --cors "*" --model /home/ubuntu/project/models --debug > /home/ubuntu/rasa_server.log 2>&1
+        - nohup /opt/rasa_env/bin/rasa run --cors "*" --debug > /home/ubuntu/rasa_server.log 2>&1
         - npm install
         - npm run build
         - npm run start
