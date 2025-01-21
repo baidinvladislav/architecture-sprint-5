@@ -68,7 +68,7 @@ resource "yandex_compute_instance" "vm" {
         - npm install
         - npm run build
         - npm run start
-        - echo "Project backend and frontend are running!" > /root/project_status.txt
+        - echo "Project backend and frontend are running!" > /home/ubuntu/project_status.log
     EOT
   }
 }
