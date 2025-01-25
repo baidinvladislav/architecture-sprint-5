@@ -17,8 +17,3 @@ stories:
     steps:
       - intent: request_info
       - action: utter_ask_more
-
-  - story: Handle deny intent
-    steps:
-      - intent: deny
-      - action: utter_acknowledge

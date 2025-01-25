@@ -9,7 +9,7 @@ terraform {
 
 provider "yandex" {
   folder_id = "b1gpijacueemuiv6g27k"
-  token     = "t1.9euelZrPk4-YzceQncnGxoyPx5LHye3rnpWalJ6YkZvGnJScnp6ciZKVmZjl8_cuFkZD-e9PMmlA_t3z925EQ0P5708yaUD-zef1656VmsbOi5uTkM3Lm4-TypfOypqS7_zN5_XrnpWax5POx5mNypqYjoyLjsvNm4rv_cXrnpWaxs6Lm5OQzcubj5PKl87KmpI.4pUyES0kpKca9lA7l_i3kqmNtv1F1vf60uzvzrXx3Pvp_beepGQ-yrWB1kQGdDIh_zFDuFlD2-j8ovP9OAQIBg"
+  token     = "t1.9euelZqakJmLipiXzpKVmpjPm42Pz-3rnpWalJ6YkZvGnJScnp6ciZKVmZjl9PcMcSxD-e8dHSXS3fT3TB8qQ_nvHR0l0s3n9euelZqWzsrLz5qemZSdl5SLzMmOju_8zef1656VmseTzseZjcqamI6Mi47LzZuK7_3F656VmpbOysvPmp6ZlJ2XlIvMyY6O.TDyJTfAV9qh5zSqIzFBU28I41K7QSeO0YBqwJyiVM2g_SrL4akQUCt1qWES9GIikkQZC5EPQPEkxpEw3WQ3aDQ"
 }
 
 data "yandex_compute_image" "ubuntu" {

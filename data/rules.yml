@@ -20,8 +20,3 @@ rules:
     steps:
       - intent: request_info
       - action: utter_ask_more
-
-  - rule: Handle deny intent
-    steps:
-      - intent: deny
-      - action: utter_acknowledge
