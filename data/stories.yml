@@ -17,3 +17,18 @@ stories:
     steps:
       - intent: request_info
       - action: utter_ask_more
+
+  - story: bot info
+    steps:
+      - intent: ask_about_bot
+      - action: utter_about_bot
+
+  - story: user mood positive
+    steps:
+      - intent: mood_great
+      - action: utter_mood_great
+
+  - story: user mood negative
+    steps:
+      - intent: mood_unhappy
+      - action: utter_mood_unhappy

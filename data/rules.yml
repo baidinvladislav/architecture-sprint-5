@@ -20,3 +20,18 @@ rules:
     steps:
       - intent: request_info
       - action: utter_ask_more
+
+  - rule: Bot info
+    steps:
+      - intent: ask_about_bot
+      - action: utter_about_bot
+
+  - rule: User mood great
+    steps:
+      - intent: mood_great
+      - action: utter_mood_great
+
+  - rule: User mood unhappy
+    steps:
+      - intent: mood_unhappy
+      - action: utter_mood_unhappy
