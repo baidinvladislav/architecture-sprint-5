@@ -107,7 +107,7 @@ function Basic() {
           <div className="card" style={stylecard}>
             {/* Заголовок чата */}
             <div className="cardHeader text-white" style={styleHeader}>
-              <h1 style={{ marginBottom: "0px" }}>AI-Архитектор</h1>
+              <h1 style={{ marginBottom: "0px" }}>Raft чат-бот</h1>
               {botTyping ? <h6>AI-ассистент печатает....</h6> : null}{" "}
               {/* Отображение индикации "ассистент печатает" */}
             </div>

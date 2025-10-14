@@ -1,34 +1,19 @@
 version: "3.1"
 
 stories:
-  - story: greet and ask architecture
+  - story: booking appointment
     steps:
       - intent: greet
       - action: utter_greet
-      - intent: ask_architecture
-      - action: utter_architecture_response
-
-  - story: goodbye
-    steps:
-      - intent: goodbye
-      - action: utter_goodbye
-
-  - story: ask for more info
-    steps:
-      - intent: request_info
-      - action: utter_ask_more
-
-  - story: bot info
-    steps:
-      - intent: ask_about_bot
-      - action: utter_about_bot
-
-  - story: user mood positive
-    steps:
-      - intent: mood_great
-      - action: utter_mood_great
-
-  - story: user mood negative
-    steps:
-      - intent: mood_unhappy
-      - action: utter_mood_unhappy
+      - intent: book_appointment
+      - action: utter_ask_doctor
+      - intent: provide_doctor
+      - action: utter_ask_date
+      - intent: provide_date
+      - action: utter_ask_time
+      - intent: provide_time
+      - action: utter_ask_patient_name
+      - intent: provide_name
+      - action: utter_confirm_booking
+      - intent: affirm
+      - action: utter_booking_success
