@@ -1,37 +1,47 @@
 version: "3.1"
 
 rules:
-  - rule: Say hello
+  - rule: Приветствие
     steps:
       - intent: greet
       - action: utter_greet
 
-  - rule: Say goodbye
+  - rule: Начать запись к врачу
+    steps:
+      - intent: book_appointment
+      - action: utter_ask_doctor
+
+  - rule: Указать врача
+    steps:
+      - intent: provide_doctor
+      - action: utter_ask_date
+
+  - rule: Указать дату
+    steps:
+      - intent: provide_date
+      - action: utter_ask_time
+
+  - rule: Указать время
+    steps:
+      - intent: provide_time
+      - action: utter_ask_patient_name
+
+  - rule: Указать имя пациента
+    steps:
+      - intent: provide_name
+      - action: utter_confirm_booking
+
+  - rule: Подтвердить запись
+    steps:
+      - intent: affirm
+      - action: utter_booking_success
+
+  - rule: Отменить запись
+    steps:
+      - intent: deny
+      - action: utter_booking_cancelled
+
+  - rule: Прощание
     steps:
       - intent: goodbye
       - action: utter_goodbye
-
-  - rule: Answer architecture questions
-    steps:
-      - intent: ask_architecture
-      - action: utter_architecture_response
-
-  - rule: Request additional information
-    steps:
-      - intent: request_info
-      - action: utter_ask_more
-
-  - rule: Bot info
-    steps:
-      - intent: ask_about_bot
-      - action: utter_about_bot
-
-  - rule: User mood great
-    steps:
-      - intent: mood_great
-      - action: utter_mood_great
-
-  - rule: User mood unhappy
-    steps:
-      - intent: mood_unhappy
-      - action: utter_mood_unhappy

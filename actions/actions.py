@@ -7,13 +7,14 @@ class ActionHelloWorld(Action):
     def name(self) -> Text:
         return "action_hello_world"
 
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        # Получаем ID пользователя
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
         user_id = tracker.sender_id
 
-        # Возвращаем сообщение с recipient_id
         print("tracker.sender_id", tracker.sender_id)
         dispatcher.utter_message(text="Hello World!", recipient_id=user_id)
 
